@@ -38,7 +38,7 @@ END
 ALGORITHM dot_product
 VAR
     tab1,tab2 : ARRAY_OF INTEGER[3];
-    i,n,p:INTEGER;
+    i,n:INTEGER;
 BEGIN
     n:=array_size();   
     read_array(n,tab1,tab2);
