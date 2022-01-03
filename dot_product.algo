@@ -1,0 +1,50 @@
+
+FUNCTION array_size() : INTEGER
+VAR
+    n : INTEGER
+BEGIN
+    REPEAT
+        Read(n)
+    UNTIL (n <= 0 OR n > 3)
+    RETURN n ;
+END
+PROCEDURE read_array(n:INTEGER,VAR T1:ARRAY_OF INTEGER,VAR T2:ARRAY_OF INTEGER)
+VAR
+    i:INTEGER
+BEGIN
+    FOR i FROM 0 TO n  DO
+        Read(T1[i])
+        Read(T2[i])
+    END_FOR
+END
+PROCEDURE product(n:INTEGER,VAR T1:ARRAY_OF INTEGER,VAR T2:ARRAY_OF INTEGER)
+VAR
+    i,p:INTEGER;
+BEGIN
+    p:=0;
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        p:=p + T1[i]*T[2]
+        IF (p=0) THEN
+            Write('vectors are orthogonal')
+        ELSE
+            Write('Not orthogonal')
+        END_IF
+    END_FOR
+END
+
+PROCEDURE result(p:INTEGER)
+VAR
+BEGIN
+        Write(p)
+END
+
+ALGORITHM dot_product
+VAR
+    tab1,tab2 : ARRAY_OF INTEGER[3];
+    i,n,p:INTEGER;
+BEGIN
+    n:=array_size();   
+    read_array(n,tab1,tab2);
+    product(n,tab1,tab2) 
+    result(p)
+END
