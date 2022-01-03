@@ -30,13 +30,10 @@ BEGIN
             Write('Not orthogonal')
         END_IF
     END_FOR
+    Write("v1 ^ v2 = ",p)
 END
 
-PROCEDURE result(p:INTEGER)
-VAR
-BEGIN
-        Write(p)
-END
+
 
 ALGORITHM dot_product
 VAR
@@ -46,5 +43,4 @@ BEGIN
     n:=array_size();   
     read_array(n,tab1,tab2);
     product(n,tab1,tab2) 
-    result(p)
 END
